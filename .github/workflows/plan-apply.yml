@@ -32,7 +32,6 @@ jobs:
         aws-region: eu-west-2
 
     - name: Setup Terraform
-      working-directory: private-access-to-ec2
       uses: hashicorp/setup-terraform@v3.0.0
 
     - name: Terraform Initialize
