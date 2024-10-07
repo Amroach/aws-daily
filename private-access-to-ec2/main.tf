@@ -18,6 +18,6 @@ resource "aws_vpc" "ecom2-vpc" {
   instance_tenancy = "default"
 
   tags = {
-    Name = "main"
+    Name = "ecom2-vpc"
   }
 }
