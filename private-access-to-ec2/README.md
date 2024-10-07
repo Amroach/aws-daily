@@ -8,6 +8,6 @@ Videos I got to get inspiration from
 
 [AWS System Manager to Manage Private EC2 Instances without Internet Access | SSM | Private EC2 | VPC](https://www.youtube.com/watch?v=lYJjw7l8Scs)
 
-[Powerpoint presentation with the diagram](https://drive.google.com/file/d/1Bop77OQg0AyKgtzOJOCUs41bLG5l5Tf-/view?usp=sharing) 
+[Powerpoint presentation with the diagram](https://docs.google.com/presentation/d/1OB_GjrUCth_e0L004H_CiLWawDuPsZYM/edit#slide=id.p1) 
 
 [openid connect set up guide](https://mahendranp.medium.com/configure-github-openid-connect-oidc-provider-in-aws-b7af1bca97dd)
