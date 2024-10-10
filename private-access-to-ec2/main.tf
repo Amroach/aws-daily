@@ -13,20 +13,12 @@ provider "aws" {
 }
 
 # Create a VPC
-resource "aws_vpc" "ecom2_vpc" {
+resource "aws_vpc" "ecom_vpc" {
   cidr_block       = "10.0.0.0/16"
   instance_tenancy = "default"
 
   tags = {
-    Name = "ecom2-vpc"
+    Name = "ecom-vpc"
   }
-}
 
-resource "aws_subnet" "ecom_subnet_public1_eu_west_1a" {
-  vpc_id     = aws_vpc.ecom2_vpc.id
-  cidr_block = "10.0.0.0/20"
-
-  tags = {
-    Name = "ecom-subnet-public1-eu-west-1a"
-  }
 }
