@@ -3,7 +3,10 @@ resource "aws_route_table" "ecom_route_table" {
   vpc_id = aws_vpc.ecom_vpc.id
 }
 
+#-------------------------#
 # public route table
+#-------------------------#
+
 resource "aws_route_table" "ecom_rtb_public" {
   vpc_id = aws_vpc.ecom_vpc.id
 
@@ -32,7 +35,10 @@ resource "aws_internet_gateway" "ecom_igw" {
 
 }
 
+#-------------------------#
 # private route table
+#-------------------------#
+
 resource "aws_route_table" "ecom_rtb_private1_eu_west_1a" {
   vpc_id = aws_vpc.ecom_vpc.id
 
@@ -43,3 +49,9 @@ resource "aws_route_table" "ecom_rtb_private1_eu_west_1a" {
 
 
 
+# resource "aws_route_table_association" "ecom_rtb_private1_eu_west_1a_association" {
+#   subnet_id      = aws_subnet.ecom_subnet_public1_eu_west_1a.id
+#   route_table_id = aws_route_table.ecom_rtb_private1_eu_west_1a.id
+# }
+
+ 
