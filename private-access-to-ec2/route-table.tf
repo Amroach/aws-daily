@@ -32,11 +32,10 @@ resource "aws_internet_gateway" "ecom_igw" {
   tags = {
     Name = "ecom-igw"
   }
-
 }
 
 #-------------------------#
-# private route table
+# private1_eu_west_1a route table
 #-------------------------#
 
 resource "aws_route_table" "ecom_rtb_private1_eu_west_1a" {
@@ -47,11 +46,10 @@ resource "aws_route_table" "ecom_rtb_private1_eu_west_1a" {
   }
 }
 
-
-
-# resource "aws_route_table_association" "ecom_rtb_private1_eu_west_1a_association" {
-#   subnet_id      = aws_subnet.ecom_subnet_public1_eu_west_1a.id
-#   route_table_id = aws_route_table.ecom_rtb_private1_eu_west_1a.id
-# }
+# private1_eu_west_1a route
+resource "aws_route_table_association" "ecom_rtb_private1_eu_west_1a_association" {
+  subnet_id      = aws_subnet.ecom_subnet_private1_eu_west_1a.id
+  route_table_id = aws_route_table.ecom_rtb_private1_eu_west_1a.id
+}
 
  

@@ -19,6 +19,7 @@ resource "aws_subnet" "ecom_subnet_public2_eu_west_1b" {
   }
 }
 
+# private1 eu_west_1a subnet
 resource "aws_subnet" "ecom_subnet_private1_eu_west_1a" {
   vpc_id     = aws_vpc.ecom_vpc.id
   cidr_block = "10.0.128.0/20"
@@ -28,6 +29,7 @@ resource "aws_subnet" "ecom_subnet_private1_eu_west_1a" {
   }
 }
 
+# private2 eu_west_1b subnet
 resource "aws_subnet" "ecom_subnet_private2_eu_west_1b" {
   vpc_id     = aws_vpc.ecom_vpc.id
   cidr_block = "10.0.144.0/20"
