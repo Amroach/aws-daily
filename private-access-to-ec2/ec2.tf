@@ -15,6 +15,8 @@ resource "aws_instance" "public_ec2" {
   instance_type = "t2.micro"
   subnet_id     = aws_subnet.ecom_subnet_public1_eu_west_1a.id
 
+  vpc_security_group_ids = [aws_security_group.ecom_lab_public.id]
+
   tags = {
     Name = "public"
   }
