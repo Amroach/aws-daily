@@ -17,7 +17,7 @@ permissions:
 
 jobs:
   deploy:
-    name: 'delply to aws'
+    name: 'delply to s3 aws'
     runs-on: ubuntu-latest
     environment: deploy-to-aws
 
