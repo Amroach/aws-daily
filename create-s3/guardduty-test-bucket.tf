@@ -1,3 +1,4 @@
+# guardduty_test_bucket s3 bucket
 resource "aws_s3_bucket" "guardduty_test_bucket" {
   bucket = "guardduty-test-bucket-1234567890"
 

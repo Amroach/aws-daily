@@ -36,24 +36,24 @@ jobs:
       uses: hashicorp/setup-terraform@v3.0.0
 
     - name: Terraform Initialize
-      working-directory: private-access-to-ec2
+      working-directory: create-s3
       run: terraform init
 
     - name: Terraform Format
-      working-directory: private-access-to-ec2
+      working-directory: create-s3
       run: terraform fmt -check
 
     - name: Terraform Validate
-      working-directory: private-access-to-ec2
+      working-directory: create-s3
       run: terraform validate
 
     - name: Terraform Plan
-      working-directory: private-access-to-ec2
+      working-directory: create-s3
       run: terraform plan
 
     - name: Terraform Apply
       if: github.ref == 'refs/heads/main'
-      working-directory: private-access-to-ec2
+      working-directory: create-s3
       run: terraform apply -auto-approve
 
     - name: Print Assumed Role
