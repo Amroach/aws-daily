@@ -23,20 +23,20 @@ resource "aws_security_group_rule" "ssh_from_ec2_instance_connect" {
   security_group_id = aws_security_group.ecom_lab_public.id
 }
 
-resource "aws_security_group_rule" "allow_http_only_from_ipv6" {
+resource "aws_security_group_rule" "allow_http" {
   type              = "ingress"
   from_port         = 80
   to_port           = 80
   protocol          = "tcp"
-  ipv6_cidr_blocks  = ["2a09:bac0:1000:da::155:3c/128"]
+  cidr_blocks       = ["0.0.0.0/0"]
   security_group_id = aws_security_group.ecom_lab_public.id
 }
 
-resource "aws_security_group_rule" "allow_https_only_ipv6" {
+resource "aws_security_group_rule" "allow_https" {
   type              = "ingress"
   from_port         = 443
   to_port           = 443
   protocol          = "tcp"
-  ipv6_cidr_blocks  = ["2a09:bac0:1000:da::155:3c/128"]
+  cidr_blocks       = ["0.0.0.0/0"]
   security_group_id = aws_security_group.ecom_lab_public.id
 }
