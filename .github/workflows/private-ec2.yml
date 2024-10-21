@@ -1,4 +1,4 @@
-name: Terraform plan/apply
+name: private-ec2
 
 on:
   pull_request:
@@ -17,7 +17,7 @@ permissions:
 
 jobs:
   deploy:
-    name: 'delply to aws'
+    name: 'delply private-ec2'
     runs-on: ubuntu-latest
     environment: deploy-to-aws
 
