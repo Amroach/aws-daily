@@ -5,14 +5,14 @@ resource "aws_security_group" "ecom_lab_public" {
 
 }
 
-resource "aws_security_group_rule" "ecom_lab_public_egress" {
-  type              = "egress"
-  security_group_id = aws_security_group.ecom_lab_public.id
-  cidr_blocks       = ["0.0.0.0/0"]
-  from_port         = 0
-  to_port           = 0
-  protocol          = "-1"
-}
+# resource "aws_security_group_rule" "ecom_lab_public_egress" {
+#   type              = "egress"
+#   security_group_id = aws_security_group.ecom_lab_public.id
+#   cidr_blocks       = ["0.0.0.0/0"]
+#   from_port         = 0
+#   to_port           = 0
+#   protocol          = "-1"
+# }
 
 resource "aws_security_group_rule" "ssh_from_ec2_instance_connect" {
   type              = "ingress"
