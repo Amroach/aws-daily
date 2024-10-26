@@ -17,6 +17,10 @@ resource "aws_instance" "public_ec2" {
 
   vpc_security_group_ids = [aws_security_group.ecom_lab_public.id]
 
+  lifecycle {
+    prevent_destroy = true
+  }
+
   tags = {
     Name = "public"
   }
