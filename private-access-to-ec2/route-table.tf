@@ -16,14 +16,14 @@ resource "aws_route_table" "ecom_rtb_public" {
 
 }
 
-# public route 
-resource "aws_route" "ecom_rtb_public_route" {
-  route_table_id = aws_route_table.ecom_rtb_public.id
+# # public route 
+# resource "aws_route" "ecom_rtb_public_route" {
+#   route_table_id = aws_route_table.ecom_rtb_public.id
 
-  destination_cidr_block = "0.0.0.0/0"
-  gateway_id             = aws_internet_gateway.ecom_igw.id
+#   destination_cidr_block = "0.0.0.0/0"
+#   gateway_id             = aws_internet_gateway.ecom_igw.id
 
-}
+# }
 
 # # Internet gateway
 # resource "aws_internet_gateway" "ecom_igw" {
