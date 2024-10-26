@@ -34,17 +34,17 @@ resource "aws_route_table" "ecom_route_table" {
 #   }
 # }
 
-# public1_eu_west_1a route association
-resource "aws_route_table_association" "ecom_rtb_public1_eu_west_1a_association" {
-  subnet_id      = aws_subnet.ecom_subnet_public1_eu_west_1a.id
-  route_table_id = aws_route_table.ecom_rtb_public.id
-}
+# # public1_eu_west_1a route association
+# resource "aws_route_table_association" "ecom_rtb_public1_eu_west_1a_association" {
+#   subnet_id      = aws_subnet.ecom_subnet_public1_eu_west_1a.id
+#   route_table_id = aws_route_table.ecom_rtb_public.id
+# }
 
-# public2_eu_west_1b route association
-resource "aws_route_table_association" "ecom_rtb_public2_eu_west_1b_association" {
-  subnet_id      = aws_subnet.ecom_subnet_public2_eu_west_1b.id
-  route_table_id = aws_route_table.ecom_rtb_public.id
-}
+# # public2_eu_west_1b route association
+# resource "aws_route_table_association" "ecom_rtb_public2_eu_west_1b_association" {
+#   subnet_id      = aws_subnet.ecom_subnet_public2_eu_west_1b.id
+#   route_table_id = aws_route_table.ecom_rtb_public.id
+# }
 
 #-------------------------#
 # private1_eu_west_1a route table
