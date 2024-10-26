@@ -7,14 +7,14 @@ resource "aws_route_table" "ecom_route_table" {
 # public route table
 #-------------------------#
 
-resource "aws_route_table" "ecom_rtb_public" {
-  vpc_id = aws_vpc.ecom_vpc.id
+# resource "aws_route_table" "ecom_rtb_public" {
+#   vpc_id = aws_vpc.ecom_vpc.id
 
-  tags = {
-    Name = "ecom-rtb-public"
-  }
+#   tags = {
+#     Name = "ecom-rtb-public"
+#   }
 
-}
+# }
 
 # # public route 
 # resource "aws_route" "ecom_rtb_public_route" {
