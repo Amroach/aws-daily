@@ -25,14 +25,14 @@ resource "aws_route" "ecom_rtb_public_route" {
 
 }
 
-# Internet gateway
-resource "aws_internet_gateway" "ecom_igw" {
-  vpc_id = aws_vpc.ecom_vpc.id
+# # Internet gateway
+# resource "aws_internet_gateway" "ecom_igw" {
+#   vpc_id = aws_vpc.ecom_vpc.id
 
-  tags = {
-    Name = "ecom-igw"
-  }
-}
+#   tags = {
+#     Name = "ecom-igw"
+#   }
+# }
 
 # public1_eu_west_1a route association
 resource "aws_route_table_association" "ecom_rtb_public1_eu_west_1a_association" {
