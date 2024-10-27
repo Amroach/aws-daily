@@ -17,8 +17,9 @@ resource "aws_instance" "public_ec2" {
 
   vpc_security_group_ids = [aws_security_group.ecom_lab_public.id]
 
+  instance_initiated_shutdown_behavior = "stop"
   lifecycle {
-    prevent_destroy = true
+    create_before_destroy = true
   }
 
   tags = {
