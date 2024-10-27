@@ -23,6 +23,6 @@ resource "aws_instance" "private_ec2" {
   }
 
   tags = {
-    Name = "public"
+    Name = "private"
   }
 }
