@@ -11,3 +11,6 @@ Videos I got to get inspiration from
 [Powerpoint presentation with the diagram](https://docs.google.com/presentation/d/1OB_GjrUCth_e0L004H_CiLWawDuPsZYM/edit#slide=id.p1) 
 
 [openid connect set up guide](https://mahendranp.medium.com/configure-github-openid-connect-oidc-provider-in-aws-b7af1bca97dd)
+
+
+Going to be extending this to a bigger project
