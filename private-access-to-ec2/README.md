@@ -14,3 +14,5 @@ Videos I got to get inspiration from
 
 
 Going to be extending this to a bigger project
+
+today i was just fixing the ec2 private subnet issue 
