@@ -16,3 +16,5 @@ Videos I got to get inspiration from
 Going to be extending this to a bigger project
 
 today i was just fixing the ec2 private subnet issue 
+
+still working everything on UI trying to have a architecture with ALB in public subnet and ec2s on th eprivate subnets
