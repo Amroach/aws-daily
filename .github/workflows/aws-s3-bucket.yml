@@ -55,6 +55,3 @@ jobs:
       if: github.ref == 'refs/heads/main'
       working-directory: create-s3
       run: terraform apply -auto-approve
-
-    - name: Print Assumed Role
-      run: aws sts get-caller-identity
