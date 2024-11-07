@@ -1,0 +1,60 @@
+# name: new template
+
+# on:
+#   pull_request:
+#     branches: ["main"]
+#     types: [opened, synchronize, reopened]
+#   push:
+#     branches:
+#       - main
+#     paths:
+#      - private-access-to-ec2/**
+#   workflow_dispatch:
+
+# permissions:
+#   id-token: write
+#   contents: read
+
+# jobs:
+#   deploy:
+#     name: 'delply privat e-ec2'
+#     runs-on: ubuntu-latest
+#     environment: deploy-to-aws
+
+#     steps:
+#     - name: Git clone the repository
+#       uses: actions/checkout@v4.1.1
+
+#     - name: Configure AWS Credentials
+#       uses: aws-actions/configure-aws-credentials@v4.0.1
+#       with:
+#         role-to-assume: ${{ secrets.PRIVATE_EC2_ACCESS_AWS_ROLE_ARN }}
+#         role-session-name: private-ec2-access
+#         aws-region: eu-west-2
+
+#     - name: Setup Terraform
+#       uses: hashicorp/setup-terraform@v3.0.0
+
+#     - name: Terraform Initialize
+#       working-directory: private-access-to-ec2
+#       run: terraform init
+
+#     - name: Terraform Format
+#       working-directory: private-access-to-ec2
+#       run: terraform fmt -check
+
+#     - name: Terraform Validate
+#       working-directory: private-access-to-ec2
+#       run: terraform validate
+
+#     - name: Terraform Plan
+#       working-directory: private-access-to-ec2
+#       run: terraform plan
+
+#     - name: Terraform Apply
+#       if: github.ref == 'refs/heads/main'
+#       working-directory: private-access-to-ec2
+#       run: terraform apply -auto-approve
+
+#     - name: Print Assumed Role
+#       run: aws sts get-caller-identity
