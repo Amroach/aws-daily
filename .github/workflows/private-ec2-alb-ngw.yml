@@ -36,24 +36,24 @@
 #       uses: hashicorp/setup-terraform@v3.0.0
 
 #     - name: Terraform Initialize
-#       working-directory: private-access-to-ec2
+#       working-directory: private-ec2-alb-ngw
 #       run: terraform init
 
 #     - name: Terraform Format
-#       working-directory: private-access-to-ec2
+#       working-directory: private-ec2-alb-ngw
 #       run: terraform fmt -check
 
 #     - name: Terraform Validate
-#       working-directory: private-access-to-ec2
+#       working-directory: private-ec2-alb-ngw
 #       run: terraform validate
 
 #     - name: Terraform Plan
-#       working-directory: private-access-to-ec2
+#       working-directory: private-ec2-alb-ngw
 #       run: terraform plan
 
 #     - name: Terraform Apply
 #       if: github.ref == 'refs/heads/main'
-#       working-directory: private-access-to-ec2
+#       working-directory: private-ec2-alb-ngw
 #       run: terraform apply -auto-approve
 
 #     - name: Print Assumed Role
